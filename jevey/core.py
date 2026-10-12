@@ -23,9 +23,21 @@ class Noul(Prim):
     def __init__(self, name: str, instructions: dict):
         super().__init__(type="noul", name=name, instructions=instructions)
 
+# %% ../nbs/00_core.ipynb #3258092f
+import json
+from fastspec.spec import SpecParser
+from fastspec.oapi import OpenAPIClient
+
 # %% ../nbs/00_core.ipynb #e1835380
-class Client:
-    pass
+class Client(BasicRepr):
+    """Client for the Jev API"""
+    HEADERS = {"Authorization": f"Bearer {os.environ['JEV_API_KEY']}",
+    "Content-Type": "application/json"}
+    def __init__(self, model="jev-latest"):
+        store_attr()
+        self.client = OpenAPIClient(JEV_SPEC, headers=dict(
+    Authorization=self.HEADERS))
+
 
 # %% ../nbs/00_core.ipynb #7877eee6
 class Decision:

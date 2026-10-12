@@ -15,7 +15,10 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
 ]
-dependencies = ['fastcore>=2.1.18']
+dependencies = [
+    'fastcore>=2.1.18',
+    "fastspec>=0.2.5",
+]
 
 [project.optional-dependencies]
 dev = ['pycachy']
