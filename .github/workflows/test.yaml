@@ -1,6 +1,7 @@
 name: CI
 on:  [workflow_dispatch, pull_request, push]
-
+env:
+  TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
 jobs:
   test:
     runs-on: ubuntu-latest
