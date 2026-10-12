@@ -1,0 +1,14 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "jevey"
+  site-url: "https://CarloLepelaars.github.io/jevey"
+  description: "Building with jev should be fun"
+  repo-branch: main
+  repo-url: "https://github.com/CarloLepelaars/jevey"
+
+format-links:
+  - html
+  - format: commonmark
+    text: Markdown

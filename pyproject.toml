@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jevey"
+dynamic = ["version"]
+description = "Building with jev should be fun"
+readme = "README.md"
+requires-python = ">=3.12"
+license = {text = "Apache-2.0"}
+authors = [{name = "Carlo Lepelaars", email = "nobody@fast.ai"}]
+keywords = ['nbdev', 'jev']
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+]
+dependencies = ['fastcore>=2.1.18']
+
+[project.optional-dependencies]
+dev = ['pycachy']
+
+[project.urls]
+Repository = "https://github.com/CarloLepelaars/jevey"
+Documentation = "https://CarloLepelaars.github.io/jevey/"
+
+[project.entry-points.nbdev]
+jevey = "jevey._modidx:d"
+
+[tool.setuptools.dynamic]
+version = {attr = "jevey.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["jevey"]
+
+[tool.nbdev]
+allowed_metadata_keys = ['solveit']
+allowed_cell_metadata_keys = ['solveit_ai']
+recursive = false
+jupyter_hooks = true
+custom_sidebar = false
+
+[tool.chkstyle]
+skip_paths = ["_modidx.py"]
