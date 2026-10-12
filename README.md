@@ -16,7 +16,13 @@ pip install jevey
 ``` python
 from jevey import Client, Noul
 n = Noul("is_bug", "Is the customer reporting a software defect?")
-# cl = Client()
-# cl += n
-# cl("The code runs perfectly")
+cl = Client()
+cl += n
+await cl("This is working perfecfly")
+```
+
+``` python
+{ 'answers': {'is_bug': {'noul': 0.04, 'type': 'noul'}},
+  'model': 'jev-1.13.0',
+  'usage': {'input_tokens': 280, 'output_tokens': 21}}
 ```
