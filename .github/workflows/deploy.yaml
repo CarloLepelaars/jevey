@@ -1,5 +1,6 @@
 name: Deploy to GitHub Pages
-
+env:
+  JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
 permissions:
   contents: write
   pages: write
